@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .title {
+    font-size: 40px;
+    margin: 15px 10px;
+    @media (max-width: 576px) {
+      
+    }
+  }
+  .social {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+    gap: 10px;
+    .github {
+      width: 25px;
+      height: auto;
+      margin-top: 5px;
+    }
+    .sponsor {
+      background-color: #edf2f7;
+      border: 2px solid #c5c9cc;
+      border-radius: 8px;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        color: #010101;
+      }
+    }
+  }
+}

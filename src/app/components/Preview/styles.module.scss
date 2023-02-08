@@ -1,0 +1,41 @@
+.preview {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .head {
+    width: 100%;
+    padding: 10px;
+    border-start-start-radius: 8px;
+    border-start-end-radius: 8px;
+    h1 {
+      text-align: center;
+    }
+  }
+  .body {
+    background-color: #fff;
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
+    .icon {
+      padding: 50px;
+    }
+    textarea {
+      height: 290px;
+      width: 250px;
+      border: 0px;
+      font-size: 20px;
+      padding: 10px;
+      outline: none;
+      resize: none;
+      font-family: 'Dekko', cursive;
+      color: #010101;
+      font-weight: 300;
+    }
+    p {
+      color: rgb(128, 128, 128);
+      text-align: center;
+      padding: 5px;
+    }
+  }
+}

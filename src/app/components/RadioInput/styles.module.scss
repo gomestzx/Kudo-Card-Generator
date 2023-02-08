@@ -1,0 +1,35 @@
+.radioButton {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  label {
+    color: #fff;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -.67px;
+  }
+  input[type='radio'] {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    cursor: pointer;
+    margin: 0px 10px;
+  }
+  input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #5047eb;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    cursor: pointer;
+  }
+}
