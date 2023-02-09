@@ -25,7 +25,7 @@ const Controls = () => {
     <div>
       <div className={styles.controls}>
         <h1>Set the title</h1>
-        <div className='flex'>
+        <div className={styles.inputs}>
           <RadioInput
             value='Totally awesome'
             onChange={(e) => setTitle(e.target.value)}
@@ -40,7 +40,7 @@ const Controls = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div className='flex'>
+        <div className={styles.inputs}>
           <RadioInput
             value='Well done'
             onChange={(e) => setTitle(e.target.value)}
@@ -55,7 +55,7 @@ const Controls = () => {
           />
         </div>
         <h1>Set the color</h1>
-        <div className='flex'>
+        <div className={styles.inputs}>
           <ColorInput
             value='5047eb'
             onChange={(e) => setColor(e.target.value)}
