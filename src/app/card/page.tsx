@@ -1,13 +1,14 @@
 'use client';
 
 import Preview from '../components/Preview';
+import { useSearchParams } from 'next/navigation';
 
 export default function Card() {
-  const queryString = location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const color = urlParams.get('color');
-  const title = urlParams.get('title');
-  const text = urlParams.get('text');
+  const searchParams = useSearchParams();
+  const color = searchParams.get('color');
+  const title = searchParams.get('title');
+  const text = searchParams.get('text');
+
   return (
     <div>
       <Preview text={text} color={color} title={title} />
