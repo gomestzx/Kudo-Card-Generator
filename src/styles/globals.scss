@@ -38,6 +38,11 @@ h1 {
   width: 100%;
 }
 
+.app {
+  height: 100vh;
+  display: flex;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap-reverse;

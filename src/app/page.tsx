@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <div className='app'>
+    <div>
       <Navbar />
       <div className='flex'>
         <Controls />
