@@ -9,6 +9,8 @@ interface IControlsContext {
   setTitle(e: any): void;
   setText(e: any): void;
   link?: string;
+  shortUrl: string;
+  setShortUrl(e: any): void;
 }
 
 interface IProvider {
@@ -21,6 +23,7 @@ export function ControlsProvider({ children }: IProvider) {
   const [color, setColor] = useState('5047eb');
   const [text, setText] = useState('');
   const [title, setTitle] = useState('Totally awesome');
+  const [shortUrl, setShortUrl] = useState('');
   const link = `/card?title=${title}&color=${color}&text=${text}`;
   return (
     <ControlsContext.Provider
@@ -32,6 +35,8 @@ export function ControlsProvider({ children }: IProvider) {
         setTitle,
         setText,
         link,
+        shortUrl: shortUrl,
+        setShortUrl,
       }}
     >
       {children}

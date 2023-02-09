@@ -10,7 +10,7 @@ export default function Card() {
   const text = searchParams.get('text');
 
   return (
-    <div>
+    <div className='app'>
       <Preview text={text} color={color} title={title} />
     </div>
   );
