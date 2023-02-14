@@ -15,7 +15,7 @@ export default function Home() {
         long_url: `https://kudo-card-generator.vercel.app${link}`,
       });
       console.log(response.data);
-      setShortUrl(response.data.link)
+      setShortUrl(response.data.link);
     } catch (err) {
       alert(err);
     }
@@ -28,8 +28,6 @@ export default function Home() {
         <Controls />
         <Preview />
       </div>
-      
-      {shortUrl ? shortUrl : ''}
     </div>
   );
 }

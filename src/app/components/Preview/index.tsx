@@ -1,8 +1,9 @@
 'use client';
 import useControls from '@/app/hooks/useControls';
-import Image from 'next/image';
 import React from 'react';
+import Icon from '../Icon';
 import styles from './styles.module.scss';
+
 
 interface IPreview {
   title?: string | null;
@@ -26,12 +27,12 @@ const Preview = (props: IPreview) => {
           name=''
           id=''
           className={styles.textarea}
-          placeholder='Type here'
+          placeholder='Type here...'
           value={props.text}
           readOnly={props.text}
           onChange={(e) => setText(e.target.value)}
         />
-        <Image src='/images/1.png' width={200} height={200} alt='icon' />
+        {Icon(props.title ? props.title : title)}
         <p>kudocardgenerator.com</p>
       </div>
     </div>

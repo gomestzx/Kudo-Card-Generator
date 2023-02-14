@@ -1,0 +1,23 @@
+.header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    span {
+        cursor: pointer;
+    }
+}
+
+.body {
+    .link {
+        background-color: rgb(128, 128, 128);
+        padding: 10px;
+        border-radius: 4px;
+    }
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 0px;
+    text-align: center;
+    color: rgb(128, 128, 128);
+}
