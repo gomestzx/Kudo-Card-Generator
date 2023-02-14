@@ -12,7 +12,7 @@ import ModalContent from '../ModalContent';
 const Controls = () => {
   const { setTitle, setColor, link, shortUrl, setShortUrl, loading, setLoading } =
     useControls();
-  const [modalIsOpen, setIsOpen] = useState<boolean>(true);
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
 
   const short = async () => {
     setLoading(true);
