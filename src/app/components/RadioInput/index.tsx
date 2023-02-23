@@ -13,7 +13,7 @@ const RadioInput = (props: IRadioInput) => {
       <input
         type='radio'
         value={props.value}
-        name={props.value}
+        name="radioInput"
         id={props.value}
         onChange={props.onChange}
         defaultChecked={props.defaultChecked ? true : false}
