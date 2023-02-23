@@ -13,11 +13,12 @@ const RadioInput = (props: IRadioInput) => {
       <input
         type='radio'
         value={props.value}
-        name='radioInput'
+        name={props.value}
+        id={props.value}
         onChange={props.onChange}
         defaultChecked={props.defaultChecked ? true : false}
       />
-      <label>{props.value}</label>
+      <label htmlFor={props.value}>{props.value}</label>
     </div>
   );
 };
