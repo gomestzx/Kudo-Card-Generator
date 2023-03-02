@@ -1,30 +1,14 @@
-import { NextPage } from 'next';
+'use client';
+
 import Preview from '../components/Preview';
 import { useSearchParams } from 'next/navigation';
 
-interface CardProps {
-  color?: string;
-  title?: string;
-  text?: string;
-}
-
-const Card: NextPage<CardProps> = ({ color = 'Default Color', title = 'Default Title', text = 'Texto não foi definido!' }) => {
+export default function Card() {
   const searchParams = useSearchParams();
-  const colorQueryParam = searchParams.get('color');
-  const titleQueryParam = searchParams.get('title');
-  const textQueryParam = searchParams.get('text');
+  const color = searchParams.get('color');
+  const title = searchParams.get('title');
+  const text = searchParams.get('text');
 
-  if (colorQueryParam) {
-    color = colorQueryParam;
-  }
-
-  if (titleQueryParam) {
-    title = titleQueryParam;
-  }
-
-  if (textQueryParam) {
-    text = textQueryParam;
-  }
 
   return (
     <div className='app'>
@@ -32,5 +16,3 @@ const Card: NextPage<CardProps> = ({ color = 'Default Color', title = 'Default T
     </div>
   );
 }
-
-export default Card;
