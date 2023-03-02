@@ -4,7 +4,6 @@ import React from 'react';
 import Icon from '../Icon';
 import styles from './styles.module.scss';
 
-
 interface IPreview {
   title?: string | null;
   color?: string | null;
@@ -24,6 +23,7 @@ const Preview = (props: IPreview) => {
       </div>
       <div className={styles.body}>
         <textarea
+          spellCheck='false'
           name=''
           id=''
           className={styles.textarea}
