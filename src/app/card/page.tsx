@@ -1,9 +1,10 @@
-import React, { useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
-import PropTypes from 'prop-types';
-import Preview from '../components/Preview';
+'use client';
 
-const Card = () => {
+import Preview from '../components/Preview';
+import { useSearchParams } from 'next/navigation';
+import { useMemo } from 'react';
+
+export default function Card() {
   const searchParams = useSearchParams();
   const color = useMemo(() => searchParams.get('color'), [searchParams]);
   const title = useMemo(() => searchParams.get('title'), [searchParams]);
@@ -14,12 +15,4 @@ const Card = () => {
       <Preview text={text} color={color} title={title} />
     </div>
   );
-};
-
-Card.propTypes = {
-  color: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-
-export default Card;
+}
