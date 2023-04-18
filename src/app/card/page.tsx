@@ -1,10 +1,9 @@
-'use client';
-
-import Preview from '../components/Preview';
+import React, { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { useMemo } from 'react';
+import PropTypes from 'prop-types';
+import Preview from '../components/Preview';
 
-export default function Card() {
+const Card = () => {
   const searchParams = useSearchParams();
   const color = useMemo(() => searchParams.get('color'), [searchParams]);
   const title = useMemo(() => searchParams.get('title'), [searchParams]);
@@ -15,4 +14,12 @@ export default function Card() {
       <Preview text={text} color={color} title={title} />
     </div>
   );
-}
+};
+
+Card.propTypes = {
+  color: PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.string
+};
+
+export default Card;
