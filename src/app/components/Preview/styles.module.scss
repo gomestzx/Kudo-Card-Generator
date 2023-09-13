@@ -30,6 +30,7 @@
       font-family: 'Dekko', cursive;
       color: #010101;
       font-weight: 300;
+      background-image: linear-gradient(to right, #FFF, #FFF 10px, transparent 10px), linear-gradient(to left, #FFF, #FFF 10px, transparent 10px), repeating-linear-gradient(#FFF, #FFF 36px, #CCC 36px, #CCC 38px);
     }
     p {
       color: rgb(128, 128, 128);

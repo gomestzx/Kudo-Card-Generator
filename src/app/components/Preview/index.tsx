@@ -1,7 +1,6 @@
-'use client';
-import useControls from '@/app/hooks/useControls';
 import React from 'react';
-import Icon from '../Icon';
+import useControls from '@/app/hooks/useControls';
+import Icon from '../Icon'; // 
 import styles from './styles.module.scss';
 
 interface IPreview {
@@ -32,7 +31,7 @@ const Preview = (props: IPreview) => {
           readOnly={props.text}
           onChange={(e) => setText(e.target.value)}
         />
-        {Icon(props.title ? props.title : title)}
+        {Icon[props.title ? props.title : title]}
         <p>kudocardgenerator.com</p>
       </div>
     </div>
