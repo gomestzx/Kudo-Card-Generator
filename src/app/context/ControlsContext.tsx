@@ -22,7 +22,7 @@ interface IProvider {
 export const ControlsContext = createContext({} as IControlsContext);
 
 export function ControlsProvider({ children }: IProvider) {
-  const [color, setColor] = useState('5047eb');
+  const [color, setColor] = useState('2563EB');
   const [text, setText] = useState('');
   const [title, setTitle] = useState('Totally awesome');
   const [shortUrl, setShortUrl] = useState('');

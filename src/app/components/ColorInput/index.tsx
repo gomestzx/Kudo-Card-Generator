@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.module.scss';
 
 interface IRadioInput {
   value: string;
@@ -9,15 +8,17 @@ interface IRadioInput {
 
 const ColorInput = (props: IRadioInput) => {
   return (
-    <div className={styles.colorInput}>
+    <div>
       <input
         type='radio'
+        className='w-15 h-15 rounded-15 relative bg-white inline-block visible cursor-pointer mr-4'
         value={props.value}
         name='colorInput'
         onChange={props.onChange}
+        id={props.value}
         defaultChecked={props.defaultChecked ? true : false}
       />
-      <span style={{ backgroundColor: `#${props.value}` }}></span>
+      <label htmlFor={props.value} className='px-8 w-20 h-5 rounded-4 mr-4 rounded-md cursor-pointer' style={{ backgroundColor: `#${props.value}` }}></label>
     </div>
   );
 };

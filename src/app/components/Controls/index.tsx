@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import ColorInput from '../ColorInput';
 import RadioInput from '../RadioInput';
-import styles from './styles.module.scss';
 import Modal from 'react-modal';
 import ModalContent from '../ModalContent';
+import styles from './styles.module.scss'
 
 const Controls = () => {
   const { setTitle, setColor, link, shortUrl, setShortUrl, loading, setLoading } =
@@ -50,9 +50,9 @@ const Controls = () => {
 
   return (
     <div>
-      <div className={styles.controls}>
-        <h1>Set the title</h1>
-        <div className={styles.inputs}>
+      <div className=' bg-slate-800 px-4 py-6 mt-4 rounded-md'>
+        <h1 className='text-white text-3xl py-4 font-semibold'>Set the title</h1>
+        <div className='flex flex-wrap space-x-2'>
           <RadioInput
             value='Totally awesome'
             onChange={(e) => setTitle(e.target.value)}
@@ -67,7 +67,7 @@ const Controls = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div className={styles.inputs}>
+        <div className='flex flex-wrap space-x-2'>
           <RadioInput
             value='Well done'
             onChange={(e) => setTitle(e.target.value)}
@@ -81,10 +81,10 @@ const Controls = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <h1>Set the color</h1>
-        <div className={styles.inputs}>
+        <h1 className='text-white  text-3xl py-4 font-semibold'>Set the color</h1>
+        <div className='flex flex-wrap py-4'>
           <ColorInput
-            value='5047eb'
+            value='2563EB'
             onChange={(e) => setColor(e.target.value)}
             defaultChecked
           />

@@ -12,7 +12,7 @@ interface IButton {
 const Button = (props: IButton) => {
   return (
     <>
-      <button className={styles.button} onClick={props.onClick}>
+      <button className=' bg-blue-600 rounded-8 text-white p-3 mt-1 text-16 flex justify-center cursor-pointer w-full rounded-md' onClick={props.onClick}>
         {props.value}
         {props.loading && (
           <ReactLoading
@@ -20,7 +20,7 @@ const Button = (props: IButton) => {
             color={'#fff'}
             height={'20px'}
             width={'20px'}
-            className={styles.spin}
+            className='py-[2px] ml-2'
           />
         )}
       </button>

@@ -11,7 +11,7 @@ export default function Card() {
   const text = useMemo(() => searchParams.get('text'), [searchParams]);
 
   return (
-    <div className='app'>
+    <div className='app w-full h-screen flex justify-center items-center'>
       <Preview text={text} color={color} title={title} />
     </div>
   );
